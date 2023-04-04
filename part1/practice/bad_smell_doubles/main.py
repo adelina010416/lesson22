@@ -7,15 +7,10 @@
 
 
 class SomeClass:
-    def __init__(self):
+    def __init__(self, reverse=False):
         self.lst = [3, 2, 1, 4, 2, 1]
-
-    def sorted(self):
-        self.lst.sort()
-        return self.lst
+        self.reverse = reverse
 
     def sorting(self):
-        return sorted(self.lst)
+        return sorted(self.lst, reverse=self.reverse)
 
-    def asc_sorting(self):
-        return sorted(self.lst, reverse=False)
